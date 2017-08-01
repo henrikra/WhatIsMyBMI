@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                heightText.text = progress.toString()
+                heightText.text = "$progress cm"
                 updateBMI()
             }
         })
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         weightSlider.max = 200
         weightSlider.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                weightText.text = progress.toString()
+                weightText.text = "$progress kg"
                 updateBMI()
             }
 
